@@ -5,24 +5,9 @@
     <title></title>
   </head>
   <body>
-    <input type="button" value="night" onclick="
-      document.querySelector('body').style.backgroundColor = 'black';
-      document.querySelector('body').style.color = 'white';
-    ">
-    <input type="button" value="day" onclick="
-      document.querySelector('body').style.backgroundColor = 'white';
-      document.querySelector('body').style.color = 'black';
-    ">
-    <input id="night_day" type="button" value="day" onclick="
-    if (document.querySelector('#night_day').value === 'day'){
-      document.querySelector('body').style.backgroundColor = 'black';
-      document.querySelector('body').style.color = 'white';
-      document.querySelector('#night_day').value = 'night';
-    } else {
-      document.querySelector('body').style.backgroundColor = 'white';
-      document.querySelector('body').style.color = 'black';
-      document.querySelector('#night_day').value = 'day';
-    }
-    ">
+    <input type="button" value="night" onclick="night();">
+    <input type="button" value="day" onclick="day();">
+    <input id="night_day" type="button" value="day" onclick="night_day();">
   </body>
 </html>
+<script src='../lecture-JS/dc17.js'></script>
