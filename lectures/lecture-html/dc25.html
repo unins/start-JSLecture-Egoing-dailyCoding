@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+      function two(){
+        document.write('<li>2-1</li>');
+        document.write('<li>2-2</li>');
+      }
+      document.write('<li>1</li>');
+      two();
+      document.write('<li>3</li>');
+      two();
+    </script>
+    <h2>Parameter & Argument</h2>
+    <script>
+      function sum(left, right){
+        document.write(left + right + '<br>');
+      }
+      sum(2, 3);
+      sum(3, 4);
+    </script>
+    <h2>Return</h2>
+    <script>
+      function sum2(left, right){
+        if (left+right<10){
+          return 'Less than 10';
+        }
+        else{
+          return 'More than 10';
+        }
+
+      }
+      document.write(sum2(2,2)+'<br>');
+      document.write('<div style="color:red">'+sum2(20,3)+'</div>');
+    </script>
+  </body>
+</html>

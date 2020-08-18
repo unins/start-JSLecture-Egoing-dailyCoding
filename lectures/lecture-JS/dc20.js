@@ -9,5 +9,5 @@ document.write(coworkers.length);
 while(coworkers[a]){
   document.write('<br />');
   document.write(coworkers[a]);
-  a = a+1;
+  a = a + 1;
 };
