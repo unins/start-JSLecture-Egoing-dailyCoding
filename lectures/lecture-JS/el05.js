@@ -142,23 +142,40 @@ const simpleMultiply = (a, b) => {
   console.log('IIFE');
 })();
 
+// function calculate(command, a, b) {
+//   if (command === 'add') {
+//     console.log(a + b);
+//   } else if (command === 'substract') {
+//     console.log(a - b);
+//   } else if (command === 'divide') {
+//     console.log(a / b);
+//   } else if (command === 'multiply') {
+//     console.log(a * b);
+//   } else if (command === 'remainder') {
+//     console.log(a % b);
+//   } else {
+//     console.log('wrong command!');
+//   }
+// };
+
 function calculate(command, a, b) {
-  if (command === 'add') {
-    console.log(a + b);
-  } else if (command === 'substract') {
-    console.log(a - b);
-  } else if (command === 'divide') {
-    console.log(a / b);
-  } else if (command === 'multiply') {
-    console.log(a * b);
-  } else if (command === 'remainder') {
-    console.log(a % b);
-  } else {
-    console.log('wrong command!');
+  switch (command) {
+    case 'add':
+      return a + b;
+    case 'substract':
+      return a - b;
+    case 'divide':
+      return a / b;
+    case 'multiply':
+      return a * b;
+    case 'remainder':
+      return a % b;
+    default:
+      throw Error('unknown command');
   }
 };
 
-calculate('add', 2, 1);
-calculate('multiply', 4, 6);
-calculate('divide', 12, 4);
-calculate('wrong', 5, 9);
+console.log(calculate('add', 2, 1));
+console.log(calculate('multiply', 4, 6));
+console.log(calculate('divide', 12, 4));
+console.log(calculate('wrong', 5, 9));
