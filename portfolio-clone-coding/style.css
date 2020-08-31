@@ -53,6 +53,14 @@ ul {
     padding-left: none;
 }
 
+/* 마우스 기본 속성 제거 */
+button {
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
 /* Typography */
 h1 {
     font-size: var(--font-large);
@@ -98,6 +106,7 @@ p{
 }
 
 .navbar__menu {
+    /* flex: 같은 줄에 표시 */
     display: flex;
 }
 
@@ -115,4 +124,37 @@ p{
 .navbar__menu__item:hover {
     background-color: var(--color-dark-blue);
     border-radius: 4px;
+}
+
+/* Home */
+#home {
+    background: url('img/homebackground-200515-154505.png') center/cover no-repeat;
+    padding: 40px;
+    text-align: center;
+}
+
+.home__avatar {
+    width: 250px;
+    height: 250px;
+    /* 이미지 비율 유지 한 상태로 늘려 맞추기: cover */
+    /* 이미지 비율 유지 한 상태로 줄여 맞추기: contain */
+    object-fit: cover; 
+    border-radius: 50%;
+    /* 보더: 굵기, 선타입, 색 */
+    border: 2px solid var(--color-light-white);
+}
+
+.home__title,
+.home__description {
+   color: var(--color-white);
+}
+
+.home__contact {
+    color: var(--color-white);
+    font-size: var(--font-regular);
+    font-weight: var(--weight-bold);
+    margin: 24px;
+    padding: 8px 12px;
+    border: 2px solid var(--color-white);
+    border-radius: var(--size-border-radius);
 }
