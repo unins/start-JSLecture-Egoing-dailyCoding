@@ -105,6 +105,7 @@ p{
     color: var(--color-white);
     padding: 16px;
     transition: all var(--animation-duration) ease-in-out;
+    /* 항상 가장 위에 표시 */
     z-index: 1;
 }
 
