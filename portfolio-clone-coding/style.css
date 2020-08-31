@@ -511,6 +511,30 @@ p{
     color: var(--color-dark-blue);
 }
 
+/* Scroll */
+.arrow-up {
+    position: fixed;
+    bottom: 30px;
+    right: 50px;
+    width: 70px;
+    height: 70px;
+    font-size: 50px;
+    text-align: center;
+    color: var(--color-white);
+    background-color: var(--color-blue);
+    border: 5px solid var(--color-white);
+    border-radius: 50%;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity var(--animation-duration) ease-in;
+}
+
+.arrow-up.visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
 @media screen and (max-width: 788px) {
     .navbar__toggle-btn {
         display: block;

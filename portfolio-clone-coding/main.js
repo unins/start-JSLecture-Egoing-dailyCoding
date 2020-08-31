@@ -1,7 +1,7 @@
 "use strict";
 
 // Make navbar transparent when it is on top.
-const navbar = document.querySelector('#navbar')
+const navbar = document.querySelector('#navbar');
 const navbarHeight = navbar.getBoundingClientRect().height;
 document.addEventListener('scroll', () => {
     if (window.scrollY > navbarHeight) {
@@ -28,7 +28,31 @@ contactBtn.addEventListener('click', () => {
     scrollIntoView('#contact');
 })
 
+// Make home slowly fade to transparent as the window scrolls down
+const homeContainer = document.querySelector('.home__container');
+const home = document.querySelector('#home');
+const homeHeight = home.getBoundingClientRect().height;
+document.addEventListener('scroll', () => {
+    homeContainer.style.opacity = 1 - window.scrollY / homeHeight;
+})
+
+// Show "arrow up" button when scrolling down
+const arrowUp = document.querySelector('.arrow-up');
+document.addEventListener('scroll', () => {
+    if (window.scrollY > homeHeight / 2) {
+        arrowUp.classList.add('visible');
+    } else {
+        arrowUp.classList.remove('visible');
+    }
+})
+
+// Handle click on the "arrow up" button
+arrowUp.addEventListener('click', () => {
+    scrollIntoView('#home');
+})
+
 function scrollIntoView(selector) {
     const scrollTo = document.querySelector(selector);
     scrollTo.scrollIntoView({behavior: 'smooth'});
 }
+
