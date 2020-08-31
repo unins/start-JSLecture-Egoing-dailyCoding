@@ -130,6 +130,16 @@ p{
     border-radius: 4px;
 }
 
+.navbar__toggle-btn {
+    position: absolute;
+    top: 24px;
+    right: 32px;
+    font-size: 24px;
+    color: var(--color-white);
+    /* 오퍼시티 0을 쓰면 클릭이 되므로 디스플레이 none을 사용 */
+    display: none;
+}
+
 /* Home */
 #home {
     background: url('img/homebackground-200515-154505.png') center/cover no-repeat;
@@ -481,4 +491,22 @@ p{
 .contact__links i:hover {
     transform: scale(1.1);
     color: var(--color-dark-blue);
+}
+
+@media screen and (max-width: 768px) {
+    .navbar__toggle-btn {
+        display: block;
+    }
+    
+    #navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar__menu {
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        display: none;
+    }
 }
